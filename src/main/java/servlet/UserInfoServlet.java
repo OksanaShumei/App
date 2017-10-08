@@ -38,7 +38,6 @@ public class UserInfoServlet extends HttpServlet {
         request.setAttribute("user", loginedUser);
 
         // Если пользователь уже вошел в систему (login), то forward (перенаправить) к странице
-        // /WEB-INF/views/userInfoView.jsp
         RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/userInfoView.jsp");
         dispatcher.forward(request, response);
 
