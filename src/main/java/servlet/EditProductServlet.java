@@ -43,7 +43,6 @@ public class EditProductServlet extends HttpServlet {
 
         // Ошибки не имеются.
         // Продукт не существует для редактирования (edit).
-        // Redirect sang trang danh sách sản phẩm.
         if (errorString != null && product == null) {
             response.sendRedirect(request.getServletPath() + "/productList");
             return;
