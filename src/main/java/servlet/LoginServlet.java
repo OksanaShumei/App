@@ -27,10 +27,6 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        // Forward (перенаправить) к странице /WEB-INF/views/loginView.jsp
-        // (Пользователь не может прямо получить доступ
-        // к страницам JSP расположенные в папке WEB-INF).
         RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/loginView.jsp");
 
         dispatcher.forward(request, response);
@@ -82,8 +78,7 @@ public class LoginServlet extends HttpServlet {
             request.setAttribute("user", user);
 
             // Forward (перенаправить) к странице /WEB-INF/views/login.jsp
-            RequestDispatcher dispatcher //
-                    = this.getServletContext().getRequestDispatcher("/WEB-INF/views/loginView.jsp");
+            RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/loginView.jsp");
 
             dispatcher.forward(request, response);
         }
