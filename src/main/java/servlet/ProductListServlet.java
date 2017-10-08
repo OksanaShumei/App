@@ -40,7 +40,6 @@ public class ProductListServlet extends HttpServlet {
         request.setAttribute("errorString", errorString);
         request.setAttribute("productList", list);
 
-        // Forward к /WEB-INF/views/productListView.jsp
         RequestDispatcher dispatcher = request.getServletContext()
                 .getRequestDispatcher("/WEB-INF/views/productListView.jsp");
         dispatcher.forward(request, response);
