@@ -33,7 +33,6 @@ public class CreateProductServlet extends HttpServlet {
     }
 
     // Когда пользователь вводит информацию продукта, и нажимает Submit.
-    // Этот метод будет вызван.
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -51,8 +50,6 @@ public class CreateProductServlet extends HttpServlet {
 
         String errorString = null;
 
-        // Кодом продукта является строка [a-zA-Z_0-9]
-        // Имеет минимум 1 символ.
         String regex = "\\w+";
 
         if (code == null || !code.matches(regex)) {
